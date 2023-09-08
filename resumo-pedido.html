@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+  />
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+    <body>
+    <div class="resumo-pedido">
+        <h2>Resumo do Pedido</h2>
+        
+    </div>
+    <form id="finalizar-pedido-form">
+    
+        
+        <button type="submit" class="btn btn-primary">Finalizar Pedido</button>
+    </form> 
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const carrinhoItensDiv = document.getElementById("carrinho-itens");
+    
+            // Recupere os itens do carrinho do LocalStorage
+            const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+    
+            // Exiba os itens do carrinho na página
+            carrinho.forEach(item => {
+                carrinhoItensDiv.innerHTML +=
+                    `<div class="item-carrinho">${item.name} Qtd: ${item.amount} - R$ ${item.price.toFixed(2)}</div>`;
+            });
+        });
+    </script>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="./index.js"></script>
+</body>
+</html>

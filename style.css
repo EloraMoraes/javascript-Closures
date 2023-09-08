@@ -1,0 +1,28 @@
+@media (max-width: 768px) {
+    .carrinho-container,
+    .dados-entrega-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.btn {
+    margin: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .carrinho-container {
+        display: none;
+    }
+    .dados-entrega-container {
+        display: block;
+    }
+}
+.hidden {
+    display: none;
+}
+.carrinho-container{
+    margin: 50px;
+}
+
+
